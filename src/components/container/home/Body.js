@@ -27,11 +27,11 @@ const Body = () => {
 
   if (!allResturants) return null;
   return (
-    <div className=" my-5 mx-8 flex flex-col items-center gap-8">
+    <div className=" my-5 mx-8 flex flex-col items-center gap-8 min-h-[100vh]">
       <div className="flex items-center">
         <input
           type="text"
-          className="input"
+          className=" min-h-[50px] w-96 py-0 px-4 text-black text-base border-[1px] border-[#406e00]  rounded-l-md focus:border-[#181f1c] outline-none"
           placeholder="Search Resturants"
           value={searchtxt}
           onChange={(e) => {
@@ -40,7 +40,7 @@ const Body = () => {
           }}
         />
         <input
-          className="button--submit"
+          className="min-h-[50px] py-2 px-4 border-none rounded-r-md bg-[#406e00] text-white text-base cursor-pointer transition ease-in-out duration-[0.3s] hover:bg-[#181f1c] "
           value="Search"
           type="submit"
           onClick={() => {

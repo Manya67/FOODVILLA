@@ -14,15 +14,10 @@ const useMenuList = (id) => {
         id
     );
     const json = await data.json();
-    // console.log(
-    //   json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-    //     ?.card?.itemCards
-    // );
+    const menu = json?.data?.cards?.find((x) => x.groupedCard)?.groupedCard
+      ?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
     setResturantdetail(json.data?.cards);
-    setMenudetail(
-      json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-        ?.card?.itemCards
-    );
+    setMenudetail(menu);
   }
 
   return [resturantdeatil, menudeatil];
