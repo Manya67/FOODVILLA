@@ -1,28 +1,27 @@
 import React, { Profiler } from "react";
-import ReactDOM from "react-dom/client";
-import "./App.css";
-import HeaderComponent, { Title } from "./components/Header";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Aboutus from "./components/Aboutus";
-import Error from "./components/Error";
-import Contact from "./components/Contact";
-import ResturantDetails from "./components/ResturantDetails";
-import Profile from "./components/Profile";
-import Cart from "./components/Cart";
 import { Provider } from "react-redux";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import "./App.css";
 import store from "./Store";
+import HeaderComponent from "./components/header/Header";
+import Container from "./components/container/Container";
+import Error from "./utils/Error";
+import Aboutus from "./components/container/about/Aboutus";
+import Profile from "./components/container/about/Profile";
+import Contact from "./components/container/contact/Contact";
+import Body from "./components/container/home/Body";
+import ResturantDetails from "./components/container/home/ResturantDetails";
+import Cart from "./components/container/cart/Cart";
+
 const Applayout = () => {
   return (
     <>
       <Provider store={store}>
-        <HeaderComponent />
-        {/* <Aboutus/>
-            <Body/>
-            <Contact/> */}
-        <Outlet />
-        <Footer />
+        <div className="flex flex-row">
+          <HeaderComponent />
+          <Container />
+        </div>
       </Provider>
     </>
   );

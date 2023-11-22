@@ -1,62 +1,46 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    border: 1px solid black;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+969A97  gray
+D6D1CD  whitish
+406E00  green
+181F1C  blackish
+*/
+.input {
+  min-height: 50px;
+  width: 600px;
+  padding: 0 1rem;
+  color: #000;
+  font-size: 15px;
+  border: 1px solid #406e00;
+  border-radius: 6px 0 0 6px;
 }
 
-.navitems>ul {
-    list-style-type: none;
-    display: flex;
+.button--submit {
+  min-height: 50px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #406e00;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.navitems>ul>li {
-    padding: 10px;
+.button--submit:hover {
+  background-color: #181f1c;
 }
 
-.card{
-    width: 200px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-}
-.card > img {
-    width: 100%;
+.input:focus,
+.input:focus-visible {
+  border-color: #181f1c;
+  outline: none;
 }
 
-.resturant-list {
-    display: flex;
-    flex-wrap: wrap;
-    /* background-color: blue; */
+.menuItem {
+  display: flex;
+  flex-direction: row;
 }
-
-/*Shimmer CSS */
-.shimmer-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-  }
-  .shimmer-card {
-    flex-basis: 250px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-color: #d3d5df;
-    box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
-  }
-  .shimmer-title {
-    width: 60%;
-    margin-top: 10px;
-  }
-  .shimmer-tags {
-    width: 80%;
-    margin-top: 4px;
-  }
-  .shimmer-details {
-    width: 100%;
-    margin-top: 18px;
-  }
-  .shimmer-container .shimmer-img {
-    height: 144px;
-    width: 230px;
-  }
