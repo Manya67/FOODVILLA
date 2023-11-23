@@ -16,10 +16,10 @@ const ResturantDetails = () => {
         <div className="w-[70%] h-full">
           <div className="min-w-full flex flex-row items-center justify-between h-full ">
             <div className="flex flex-col w-[70%] h-[100%] justify-center items-start gap-5 ">
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-3xl lg:text-5xl font-bold">
                 {resturantdeatil[0]?.card?.card?.info?.name}
               </h1>
-              <div className="flex gap-3">
+              <div className="flex gap-3 flex-wrap">
                 <h3>{resturantdeatil[0]?.card?.card?.info?.city}</h3>
                 <span> | </span>
                 <h3>{resturantdeatil[0]?.card?.card?.info?.locality}</h3>
@@ -39,7 +39,7 @@ const ResturantDetails = () => {
           </div>
         </div>
       </div>
-      <div className="w-[70%] flex flex-wrap gap-x-4 gap-y-2 mt-8">
+      <div className="w-[90%] flex flex-wrap gap-x-4 gap-y-4 mt-8 justify-center">
         {menudetail.map((item) => (
           <MenuItem item={item?.card?.info} key={item?.card?.info?.id} />
         ))}

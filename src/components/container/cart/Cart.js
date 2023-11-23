@@ -13,10 +13,12 @@ const Cart = () => {
       </div>
       {items.length === 0 ? (
         <div className="mt-10">
-          <h1 className="text-5xl font-bold">Nothing on the cart!</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold">
+            Nothing on the cart!
+          </h1>
         </div>
       ) : (
-        <div className="w-[70%] flex flex-wrap gap-x-4 gap-y-2 mt-8">
+        <div className="w-[90%] flex flex-wrap gap-x-4 gap-y-2 mt-8 justify-center">
           {items.map((item) => {
             return (
               <div className="flex w-80 h-96 flex-col rounded-xl bg-[#eaf1ec] bg-clip-border text-black shadow-md">

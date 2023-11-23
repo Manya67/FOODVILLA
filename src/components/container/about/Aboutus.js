@@ -11,8 +11,11 @@ const Aboutus = () => {
       <div className="w-[100%] bg-[#406E00] text-white flex flex-col justify-center items-center rounded-b-lg h-20 mb-4">
         <h1 className="text-5xl font-bold">About Website</h1>
       </div>
-      <div className=" flex flex-row justify-between items-center h-auto mx-3">
-        <div className="w-[60%] h-[100%] text-xl">
+      <div
+        className="flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:mx-3  "
+        // className="h-auto" desktop
+      >
+        <div className="w-[60%] h-[100%] text-xl text-justify">
           <p>
             This website application is made using ReactJS and other libraries.
           </p>

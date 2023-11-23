@@ -31,7 +31,7 @@ const Body = () => {
       <div className="flex items-center">
         <input
           type="text"
-          className=" min-h-[50px] w-96 py-0 px-4 text-black text-base border-[1px] border-[#406e00]  rounded-l-md focus:border-[#181f1c] outline-none"
+          className=" min-h-[50px] w-30 sm:w-96  py-0 px-4 text-black text-base border-[1px] border-[#406e00]  rounded-l-md focus:border-[#181f1c] outline-none"
           placeholder="Search Resturants"
           value={searchtxt}
           onChange={(e) => {

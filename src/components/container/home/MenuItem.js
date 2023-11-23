@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { addItems } from "../../../Slice/CartSlice";
 import { BsFillStarFill } from "react-icons/bs";
 import { LiaRupeeSignSolid } from "react-icons/lia";
+import { Toaster, toast } from "react-hot-toast";
 
 const MenuItem = ({ item }) => {
   const [count, setCount] = useState(0);
@@ -10,6 +11,8 @@ const MenuItem = ({ item }) => {
   const handleAddItem = (item) => {
     dispatch(addItems(item));
   };
+
+  const notify = () => toast.success("Item Added to the Cart!");
 
   return (
     <div className="flex w-80 h-96 flex-col rounded-xl bg-[#eaf1ec] bg-clip-border text-black shadow-md">
@@ -45,11 +48,13 @@ const MenuItem = ({ item }) => {
           onClick={() => {
             handleAddItem(item);
             setCount(1);
+            notify();
           }}
           disabled={count == 1 ? true : false}
         >
           {count == 0 ? "ADD" : "ADDED"}
         </button>
+        <Toaster />
       </div>
     </div>
   );

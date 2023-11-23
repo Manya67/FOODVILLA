@@ -12,11 +12,11 @@ import {
   BsGrid,
 } from "react-icons/bs";
 
-export const navStyle = "flex justify-center py-3 rounded-sm";
+export const navStyle = "flex justify-center";
 const SideNav = () => {
   return (
-    <div className=" h-[50%]">
-      <ul className="flex flex-col justify-center h-[100%] gap-6 w-[100%]">
+    <div className="w-full md:h-full">
+      <ul className="flex flex-row md:flex-col md:justify-evenly w-[100%] h-[100%] items-center gap-6 justify-between ">
         <Link to="/">
           <li className={navStyle}>
             <BsGridFill size={32} color="#406E00" />

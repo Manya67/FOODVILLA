@@ -18,7 +18,7 @@ const Applayout = () => {
   return (
     <>
       <Provider store={store}>
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row">
           <HeaderComponent />
           <Container />
         </div>

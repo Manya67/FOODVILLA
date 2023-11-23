@@ -5,7 +5,7 @@ const Contact = () => {
         <h1 className="text-5xl font-bold">Contact Us</h1>
       </div>
       <div className=" w-full min-h-[60vh] flex flex-col justify-center items-center gap-4">
-        <div className=" flex flex-col w-[40%]  py-4 px-8 gap-5">
+        <div className=" flex flex-col w-6/12 py-4 px-8 gap-5">
           <input
             className="border-2 border-[#406E00] focus:border-[#181F1C] py-4 px-2 rounded-lg"
             placeholder="Name"

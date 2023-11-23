@@ -13,10 +13,12 @@ export const Title = () => (
 
 const HeaderComponent = () => {
   return (
-    <div className="flex flex-col h-[100vh] justify-between shadow-2xl">
+    <div className="flex flex-row shadow-2xl justify-between md:flex-col md:h-[100vh]">
       <Title />
-      <SideNav />
-      <div></div>
+      <div className="w-[50%] flex justify-center items-center md:h-[50%] md:w-full">
+        <SideNav />
+      </div>
+      <div className="w-[20%]"></div>
     </div>
   );
 };
