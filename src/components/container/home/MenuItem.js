@@ -36,7 +36,8 @@ const MenuItem = ({ item }) => {
             {item?.price / 100 || "NA"}
           </span>
           <span className="flex flex-row items-center justify-start gap-x-2">
-            {item?.ratings?.aggregatedRating?.rating} <BsFillStarFill />
+            {item?.ratings?.aggregatedRating?.rating || "No ratings provided"}{" "}
+            <BsFillStarFill />
           </span>
         </p>
       </div>
@@ -50,9 +51,9 @@ const MenuItem = ({ item }) => {
             setCount(1);
             notify();
           }}
-          disabled={count == 1 ? true : false}
+          disabled={count == 1 || item.price === undefined ? true : false}
         >
-          {count == 0 ? "ADD" : "ADDED"}
+          {item.price === undefined ? "Disabled" : count == 0 ? "ADD" : "ADDED"}
         </button>
         <Toaster />
       </div>

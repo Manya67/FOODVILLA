@@ -1,5 +1,5 @@
 import { IMG_URL } from "../../../utils/Config";
-const ResturantCard = ({ name, city, area, cloudinaryImageId }) => {
+const ResturantCard = ({ name, locality, areaName, cloudinaryImageId }) => {
   return (
     <div className="flex w-80 h-96 flex-col rounded-xl bg-[#eaf1ec] bg-clip-border text-black shadow-md">
       <div className="overflow-hidden shadow-lg rounded-xl">
@@ -11,7 +11,7 @@ const ResturantCard = ({ name, city, area, cloudinaryImageId }) => {
           {name}
         </h5>
         <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-          {`Area: ${area}, City: ${city}`}
+          {`Area: ${areaName}, Locality: ${locality}`}
         </p>
       </div>
       <div className="p-6 pt-0 ">
