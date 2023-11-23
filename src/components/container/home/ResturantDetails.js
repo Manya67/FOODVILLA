@@ -11,7 +11,7 @@ const ResturantDetails = () => {
   return !resturantdeatil ? (
     <Shimmer />
   ) : (
-    <div className="min-h-[100vh] flex flex-col justify-center items-center ">
+    <div className="min-h-[100vh] flex flex-col justify-start items-center ">
       <div className="w-[100%] bg-[#406E00] text-white flex flex-col justify-center items-center rounded-b-lg h-72">
         <div className="w-[70%] h-full">
           <div className="min-w-full flex flex-row items-center justify-between h-full ">
@@ -40,9 +40,17 @@ const ResturantDetails = () => {
         </div>
       </div>
       <div className="w-[90%] flex flex-wrap gap-x-4 gap-y-4 mt-8 justify-center">
-        {menudetail.map((item) => (
-          <MenuItem item={item?.card?.info} key={item?.card?.info?.id} />
-        ))}
+        {menudetail === undefined ? (
+          <>
+            <h1 className="text-3xl lg:text-5xl font-bold">
+              Menu Items not available
+            </h1>
+          </>
+        ) : (
+          menudetail.map((item) => (
+            <MenuItem item={item?.card?.info} key={item?.card?.info?.id} />
+          ))
+        )}
       </div>
     </div>
   );
