@@ -3,7 +3,10 @@ const ResturantCard = ({ name, locality, areaName, cloudinaryImageId }) => {
   return (
     <div className="flex w-80 h-96 flex-col rounded-xl bg-[#eaf1ec] bg-clip-border text-black shadow-md">
       <div className="overflow-hidden shadow-lg rounded-xl">
-        <img src={IMG_URL + cloudinaryImageId} />
+        <img
+          src={IMG_URL + cloudinaryImageId}
+          alt={`${name} image not found`}
+        />
       </div>
 
       <div className="p-6">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import reactLogo from "../../../images/reactLogo.png";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,55 +11,52 @@ const Aboutus = () => {
       <div className="w-[100%] bg-[#406E00] text-white flex flex-col justify-center items-center rounded-b-lg h-20 mb-4">
         <h1 className="text-5xl font-bold">About Website</h1>
       </div>
-      <div
-        className="flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:mx-3  "
-        // className="h-auto" desktop
-      >
-        <div className="w-[60%] h-[100%] text-xl text-justify">
-          <p>
-            This website application is made using ReactJS and other libraries.
-          </p>
-          <ul>
+      <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:mx-3  ">
+        <div className="w-[60%] h-[100%] text-xl text-justify ml-4">
+          <ul className="list-disc">
             <li>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Developed a dynamic web application using ReactJS, ReduxJS, and
+              Tailwind CSS, showcasing proficiency in modern front-end
+              technologies.
             </li>
             <li>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Implemented over 10 components, each serving a specific function,
+              resulting in a modular and scalable codebase.
             </li>
             <li>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Integrated RESTful APIs from Swiggy seamlessly incorporate
+              real-time data, enhancing the user experience with up-to-date
+              information.
             </li>
             <li>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Leveraged ReduxJS for efficient state management, ensuring
+              predictable and centralized data flow throughout the application.
             </li>
             <li>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Crafted custom hooks to encapsulate logic and promote code
+              reusability and Incorporated preexisting hooks to streamline
+              development and adhere to best practices.
             </li>
             <li>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Implemented robust routing mechanisms, enhancing navigation within
+              the application and providing a smooth user journey.
+            </li>
+            <li>
+              Engineered a sophisticated search feature, allowing users to
+              efficiently locate and access relevant content within the
+              application. Engineered a sophisticated search feature, allowing
+              users to efficiently locate and access relevant content within the
+              application.
+            </li>
+            <li>
+              Utilized Tailwind CSS to create a responsive and visually
+              appealing user interface, ensuring a consistent experience across
+              various devices.
             </li>
           </ul>
         </div>
         <div className="">
-          <img src={reactLogo} />{" "}
+          <img src={reactLogo} alt="React Logo" />{" "}
         </div>
       </div>
       <div className="flex justify-center items-center mt-2 mb-4">

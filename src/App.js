@@ -1,7 +1,7 @@
-import React, { Profiler } from "react";
+import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import store from "./Store";
 import HeaderComponent from "./components/header/Header";

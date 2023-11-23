@@ -28,6 +28,7 @@ const Cart = () => {
                       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" +
                       item.imageId
                     }
+                    alt={`${item.name} image not found`}
                     className="object-cover"
                   />
                 </div>

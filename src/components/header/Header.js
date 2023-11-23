@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/foodLogo.jpeg";
 import SideNav from "./SideNav";
@@ -6,7 +6,7 @@ import SideNav from "./SideNav";
 export const Title = () => (
   <Link to="/">
     <div className=" w-[100px] m-3">
-      <img src={logo} />
+      <img src={logo} alt="Logo Img " />
     </div>
   </Link>
 );

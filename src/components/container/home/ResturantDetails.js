@@ -3,10 +3,15 @@ import Shimmer from "../../../utils/Shimmer";
 import { IMG_URL } from "../../../utils/Config";
 import MenuItem from "./MenuItem";
 import useMenuList from "../../../hooks/useMenuList";
+import { useEffect } from "react";
 
 const ResturantDetails = () => {
   const { id } = useParams();
   const [resturantdeatil, menudetail] = useMenuList(id);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   return !resturantdeatil ? (
     <Shimmer />
@@ -33,6 +38,7 @@ const ResturantDetails = () => {
                   IMG_URL +
                   resturantdeatil[0]?.card?.card?.info?.cloudinaryImageId
                 }
+                alt={`${resturantdeatil[0]?.card?.card?.info?.name} image not found`}
                 className="object-cover rounded-lg"
               />
             </div>

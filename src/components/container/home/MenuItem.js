@@ -22,6 +22,7 @@ const MenuItem = ({ item }) => {
             "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" +
             item?.imageId
           }
+          alt={`${item.name} image not found`}
           className="object-cover"
         />
       </div>
@@ -51,9 +52,13 @@ const MenuItem = ({ item }) => {
             setCount(1);
             notify();
           }}
-          disabled={count == 1 || item.price === undefined ? true : false}
+          disabled={count === 1 || item.price === undefined ? true : false}
         >
-          {item.price === undefined ? "Disabled" : count == 0 ? "ADD" : "ADDED"}
+          {item.price === undefined
+            ? "Disabled"
+            : count === 0
+            ? "ADD"
+            : "ADDED"}
         </button>
         <Toaster />
       </div>

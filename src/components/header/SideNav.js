@@ -1,15 +1,10 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   BsCartFill,
-  BsCart,
   BsTelephoneFill,
-  BsTelephone,
   BsPostcardFill,
-  BsPostcard,
   BsGridFill,
-  BsGrid,
 } from "react-icons/bs";
 
 export const navStyle = "flex justify-center";
