@@ -11,7 +11,7 @@ const useResturantList = () => {
   async function getRestaurants() {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.179683924526447&lng=79.93636887520552&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.179683924526447&lng=79.93636887520552&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       if (!response.ok) {
         const err = response.status;

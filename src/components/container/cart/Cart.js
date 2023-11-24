@@ -9,7 +9,7 @@ const Cart = () => {
   return (
     <div className="min-h-[90vh] flex flex-col justify-start items-center ">
       <div className="w-[100%] bg-[#406E00] text-white flex flex-col justify-center items-center rounded-b-lg h-20">
-        <h1 className="text-5xl font-bold">Cart</h1>
+        <h1 className="text-2xl sm:text-5xl font-bold">Cart</h1>
       </div>
       {items.length === 0 ? (
         <div className="mt-10">

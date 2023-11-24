@@ -7,7 +7,7 @@ import {
   BsGridFill,
 } from "react-icons/bs";
 
-export const navStyle = "flex justify-center";
+export const navStyle = "flex justify-center cursor-pointer";
 const SideNav = () => {
   return (
     <div className="w-full md:h-full">

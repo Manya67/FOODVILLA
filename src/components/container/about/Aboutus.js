@@ -8,11 +8,11 @@ const Aboutus = () => {
   const dispatch = useDispatch();
   return (
     <div className="min-h-[90vh]">
-      <div className="w-[100%] bg-[#406E00] text-white flex flex-col justify-center items-center rounded-b-lg h-20 mb-4">
-        <h1 className="text-5xl font-bold">About Website</h1>
+      <div className=" w-[100%] bg-[#406E00] text-white flex flex-col justify-center items-center rounded-b-lg h-20 mb-4">
+        <h1 className=" text-2xl sm:text-5xl font-bold">About Website</h1>
       </div>
       <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between lg:mx-3  ">
-        <div className="w-[60%] h-[100%] text-xl text-justify ml-4">
+        <div className=" w-full sm:w-[60%] h-[100%] text-xl text-justify px-5">
           <ul className="list-disc">
             <li>
               Developed a dynamic web application using ReactJS, ReduxJS, and
