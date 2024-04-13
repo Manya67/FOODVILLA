@@ -29,6 +29,7 @@ const useResturantList = () => {
           }
         }
         const resData = await checkJsonData(json);
+        console.log(resData);
         setAllRestaurants(resData);
         setFilteredRestaurants(resData);
       }
