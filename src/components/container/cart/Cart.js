@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { BsFillStarFill } from "react-icons/bs";
 import { LiaRupeeSignSolid } from "react-icons/lia";
-
+import { MENU_IMG_URL } from "../../../utils/Config";
+import brokenImg from "../../../images/brokenImg.png";
 const Cart = () => {
   const items = useSelector((store) => store.cart.items);
   console.log(items);
@@ -24,12 +25,13 @@ const Cart = () => {
               <div className="flex w-80 h-96 flex-col rounded-xl bg-[#eaf1ec] bg-clip-border text-black shadow-md">
                 <div className="overflow-hidden shadow-lg rounded-xl">
                   <img
-                    src={
-                      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" +
-                      item.imageId
-                    }
+                    src={MENU_IMG_URL + item.imageId}
                     alt={`${item.name} image not found`}
                     className="object-cover"
+                    onError={({ target }) => {
+                      target.onError = null;
+                      target.src = brokenImg;
+                    }}
                   />
                 </div>
                 <div className="p-6">
